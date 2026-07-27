@@ -5,7 +5,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "👋 Hello! I'm your Employee Assistant. Try saying:\n\n\"Add employee John Doe from IT department Or \" \n\n\"Update employee ID 4521's department to Finance \"",
+      text: "👋 Hello! I'm your Employee Assistant. Try saying:\n\n\"Add/Create/Register employee John Doe from IT department \" \n\n\"Update/Modify/Edit employee ID 4521's department to Finance \" \n\n\"Find/show/Retrive/Get employee ID 123456 \"",
       sender: 'bot',
       type: 'info'
     }
