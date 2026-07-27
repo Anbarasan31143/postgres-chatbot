@@ -96,8 +96,8 @@ const ChatBot = () => {
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <h1>🤖 Employee Chatbot</h1>
-        <p>Powered by Spring Boot Backend</p>
+        <h1>🤖 Employee Chatbot-Anbarasan</h1>
+        <p>Powered by Spring Boot Backend AI</p>
       </div>
 
       <div className="messages-container">
