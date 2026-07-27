@@ -5,7 +5,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "👋 Hello! I'm your Employee Assistant. Try saying:\n\n\"Add employee John Doe from IT department\"",
+      text: "👋 Hello! I'm your Employee Assistant. Try saying:\n\n\"Add employee John Doe from IT department Or \" \n\n\"Update employee ID 4521's department to Finance \"",
       sender: 'bot',
       type: 'info'
     }
@@ -56,11 +56,25 @@ const ChatBot = () => {
       if (data.status === 'success') {
         botResponse.type = 'success';
         let text = `✅ ${data.message}`;
-        
+
         if (data.data && data.data.employeeId) {
           text += `\n\n📋 Employee ID: ${data.data.employeeId}`;
-          if (data.data.email) {
-            text += `\nEmail: ${data.data.email}`;
+
+          const fullName = [data.data.firstName, data.data.lastName].filter(Boolean).join(' ');
+          if (fullName) {
+            text += `\nName: ${fullName}`;
+          }
+          if (data.data.department) {
+            text += `\nDepartment: ${data.data.department}`;
+          }
+          if (data.data.emailId) {
+            text += `\nEmail: ${data.data.emailId}`;
+          }
+          if (data.data.phoneNumber) {
+            text += `\nPhone: ${data.data.phoneNumber}`;
+          }
+          if (data.data.address) {
+            text += `\nAddress: ${data.data.address}`;
           }
         }
         
